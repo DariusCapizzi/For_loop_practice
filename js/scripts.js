@@ -3,20 +3,79 @@ $(document).ready(function() {
     event.preventDefault();
 
 
-// factorials
+// prime numbers
+  var topNumber = parseInt($("input#numberOne").val());
+  // console.log(firstNumber)
 
-// recursive
-  var firstNumber = parseInt($("input#numberOne").val());
-  function factory(val){
-    if (val <= 1){
-    return 1;
-    }
-    else{
-      return val * factory(val - 1);
-    }
-  }
-  factory(firstNumber)
-  console.log(factory(firstNumber))
+  for (var firstNumber = topNumber; firstNumber > 0 ; firstNumber-- ) {
+
+
+      var value = 0;
+      for (i = 1; i <= firstNumber ; i++ ){
+        // console.log(i)
+
+        if (firstNumber % i === 0){
+          value++
+          //console.log(value)
+        }
+      }
+      console.log(value)
+      if (value === 2 ){
+        console.log(firstNumber + " is prime" + ". It has " + value + " divisor")
+      } else {
+        console.log(firstNumber + " is not prime" +  ". It has " + value + " divisors");
+      }
+
+}
+
+// // find if input is prime
+//   var firstNumber = parseInt($("input#numberOne").val());
+//   var value = 0;
+//
+//   for (i = 1; i <= (firstNumber / 2); i++ ){
+//     // console.log(i)
+//
+//     if (firstNumber % i === 0){
+//       value++
+//       //console.log(value)
+//     }
+//   }
+//   console.log(value)
+//   if (value === 1 ){
+//     console.log(firstNumber + " is prime")
+//   } else {
+//     console.log(firstNumber + " is not prime");
+//   }
+
+
+// //  palindromes
+//   var firstword = $("input#numberOne").val();
+//   console.log(firstword)
+//   var wordArray = firstword.split("");
+//   console.log(wordArray);
+//   var secondArray = wordArray.slice();
+//   var secondArray = secondArray.reverse()
+//   if (
+//     secondArray.toString() === wordArray.toString()
+//     //word array . reverse == word array
+//   ){
+//     console.log("success")
+//   }
+
+// // factorials
+//
+// // recursive
+//   var firstNumber = parseInt($("input#numberOne").val());
+//   function factory(val){
+//     if (val <= 1){
+//     return 1;
+//     }
+//     else{
+//       return val * factory(val - 1);
+//     }
+//   }
+//   factory(firstNumber)
+//   console.log(factory(firstNumber))
 // // iterative
 //   var firstNumber = parseInt($("input#numberOne").val());
 //   var fact = 1;
@@ -27,7 +86,7 @@ $(document).ready(function() {
 
 
 
-// // word puzzle
+// word puzzle
     // var firstword = $("input#numberOne").val();
     // console.log(firstword);
     //
